@@ -11,6 +11,9 @@ import { convertToCoreMessages, streamText } from "ai";
 import { google } from "@ai-sdk/google";
 import { getMqttClient } from "@/services/mqtt/mqtt";
 
+// TAMBAHKAN BARIS INI: Memaksa API ini berjalan secara dinamis saat runtime, bukan saat build time.
+export const dynamic = "force-dynamic";
+
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
 export const runtime = "nodejs"; // eksplisit agar tidak pindah ke Edge
