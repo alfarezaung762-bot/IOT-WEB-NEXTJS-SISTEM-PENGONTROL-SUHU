@@ -13,5 +13,7 @@ export async function POST(request: Request) {
   }
 
   const audioStream = await createAudioStreamFromText(text);
-  return new Response(audioStream, { headers });
+  
+  // Tambahkan 'as any' di sini untuk membungkam TypeScript soal tipe Buffer
+  return new Response(audioStream as any, { headers });
 }
