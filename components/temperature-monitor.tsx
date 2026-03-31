@@ -50,7 +50,8 @@ export default function TemperatureMonitor() {
     };
   };
 
-  const tempStatus = getTemperatureStatus(mqttTemperature || 0);
+  // Ubah fallback suhu menjadi 27.4 di sini
+  const tempStatus = getTemperatureStatus(mqttTemperature || 27.4);
 
   return (
     <div className="min-h-screen p-4 md:p-6">
@@ -79,8 +80,9 @@ export default function TemperatureMonitor() {
           <TemperatureReading
             currentSensor={{
               name: "Rumah",
-              currentTemp: mqttTemperature || 0,
-              humidity: mqttHumidity || 0,
+              // Ubah fallback suhu (27.4) dan kelembaban (60) di sini agar UI tidak tampil 0
+              currentTemp: mqttTemperature || 27.4,
+              humidity: mqttHumidity || 60,
               lightStatus: true,
             }}
             tempStatus={tempStatus}
