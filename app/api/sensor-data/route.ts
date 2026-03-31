@@ -1,3 +1,6 @@
+// TAMBAHKAN BARIS INI: Memaksa API tidak di-build secara statis
+export const dynamic = "force-dynamic";
+
 import { db } from "@/db/db";
 import { sensorData } from "@/db/schema";
 import { count, desc } from "drizzle-orm";
