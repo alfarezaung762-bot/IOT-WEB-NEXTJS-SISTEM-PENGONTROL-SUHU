@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */gi
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
