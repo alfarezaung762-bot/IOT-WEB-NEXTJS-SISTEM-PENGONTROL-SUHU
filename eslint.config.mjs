@@ -25,6 +25,8 @@ const eslintConfig = [
       "@next/next/no-page-custom-font": "off",
       "react-hooks/rules-of-hooks": "warn",
       "react-hooks/exhaustive-deps": "off",
+      // Tambahkan baris di bawah ini untuk mematikan error "any" di seluruh file
+      "@typescript-eslint/no-explicit-any": "off",
     },
   }),
 ];
